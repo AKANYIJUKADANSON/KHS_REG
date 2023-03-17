@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
 
+    // landing layout page
+    public function splash(){
+        return view('pages.splash');
+    }
+
     // Index page
     public function index(){
         $dashboard = 'In adi Dashboard';

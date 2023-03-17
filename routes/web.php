@@ -21,8 +21,14 @@ use Illuminate\Support\Facades\Route;
 
 
 // Index page (defines wea the application will start from)
-Route::get('/', 'PagesController@index');
+Route::get('/', 'PagesController@splash');
+
+// Index page (defines wea the application will start from)
+// Route::get('/index', 'PagesController@index');
 
 
 // Routing all the resourses in the registration controller
 Route::resource('registration', 'RegistrationController');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
